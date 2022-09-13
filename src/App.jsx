@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
 
 import Searcher from './components/Searcher/Index';
+import UserCard from './containers/userCard';
 
 import { getGitHubUser } from './services';
 
@@ -47,7 +48,8 @@ const App = () => {
         width: '80vw',
       }}
     >
-    <Searcher setInputUser={ setInputUser }/>
+      <Searcher setInputUser={ setInputUser }/>
+      <UserCard userState={ userState }/>
     </Container>
   )
 }
